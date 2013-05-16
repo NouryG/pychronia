@@ -55,6 +55,7 @@ ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/' # deprecated but required by djangocm
 STATIC_ROOT = os.path.join(ROOT_PATH, "static") # where collectstatic cmd will place files
 STATICFILES_DIRS = ()
 
+USE_TZ = True
 TIME_ZONE = 'Europe/Paris'
 USE_L10N = True
 USE_I18N = True
