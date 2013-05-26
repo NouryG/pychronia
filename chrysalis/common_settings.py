@@ -3,8 +3,14 @@
 from rpgweb_common.common_settings import *
 
 
+INSTALLED_APPS = [
 
-INSTALLED_APPS += [
+    'tinymce',
+    'grappelli', # needed by filebrowser
+    'filebrowser', # needed by tinymce, instead of filer
+
+] + INSTALLED_APPS + [
+
     'chrysalis',
 
     'userprofiles',
@@ -13,6 +19,8 @@ INSTALLED_APPS += [
     'cms',
     'mptt',
     'menus',
+
+
 
     'cmsplugin_rst',
     'cmsplugin_simple_gallery',
@@ -102,6 +110,7 @@ CMS_CACHE_DURATIONS = { # in seconds
     'content': 60,
     'permissions': 60 * 60,
 }
+CMS_USE_TINYMCE = True
 
 
 ## SIMPLEGALLERY CONF ##
@@ -132,9 +141,24 @@ CMSPLUGIN_ZINNIA_APP_MENUS = []
 JPLAYER_BASE_PATH = STATIC_URL + "libs/jquery-jplayer-2.3.0/" # for Jplayer SWF object mainly
 
 
+## DJANGO-TINYCMCE EDITOR CONF ##
+TINYMCE_JS_ROOT = STATIC_URL + "libs/tinymce/"
+TINYMCE_JS_URL = TINYMCE_JS_ROOT + "tiny_mce_src.js"
+TINYMCE_DEFAULT_CONFIG = {
+    #'plugins': "table,spellchecker,paste,searchreplace",
+    'relative_urls': False,
+    'theme': "advanced",
+}
+TINYMCE_SPELLCHECKER = False
+TINYMCE_COMPRESSOR = False
+TINYMCE_FILEBROWSER = True
+
+
+## DJANGO FILEBROWSER CONF ##
+FILEBROWSER_DIRECTORY = "filebrowser_uploads"
+
 ## DJANGO REGISTRATION CONF ##
 ACCOUNT_ACTIVATION_DAYS = 7
-
 
 
 ## DJANGO AUTH & USERPROFILES CONF ##

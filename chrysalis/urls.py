@@ -7,12 +7,18 @@ from cms.views import details
 from django.views.generic import RedirectView
 from django.core.urlresolvers import reverse_lazy
 
+from filebrowser.sites import site as filebrowser_site
+
 admin.autodiscover()
 
 urlpatterns = patterns('',
+    url(r'^admin/filebrowser/', include(filebrowser_site.urls)), # (before any admin-urls)!!
     (r'^admin/', include(admin.site.urls)),
 
+    (r'^grappelli/', include('grappelli.urls')),
+
     (r'^i18n/', include('django.conf.urls.i18n')), # to set language
+    (r'^tinymce/', include('tinymce.urls')),
 
     ## (r'^accounts/', include('registration.backends.default.urls')), # two steps user registration with django-registration
     (r'^accounts/', include('userprofiles.urls')), # one-step registration
@@ -24,6 +30,8 @@ urlpatterns = patterns('',
     url(r'^$', RedirectView.as_view(url=reverse_lazy('pages-root'))), # REDIRECT TO CMS HOMEPAGE
     (r'^cms/', include('cms.urls')), # this MUST end with '/' or be empty
 )
+
+
 
 
 #from pprint import pprint
