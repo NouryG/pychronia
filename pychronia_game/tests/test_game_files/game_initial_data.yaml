@@ -179,11 +179,299 @@ global_parameters:
 
 locations:
 
-    Baynon:
-        spy_message: "This city is famous for its jewelry industry and its huge archeological museum. It seems no Akarith has ever been so deep into the 'miscreant continent'."
-    Alifir:
-        spy_message: "People here are very healthy, but quite ignorant. They don't know anything about thye Great Atomic Chaos that took place in Midolia."
+    Austrions:
+        summary:
+        geolocation: 727, 314
 
+    Baronies:
+        summary:
+        geolocation: 867, 243
+
+    Kingdom of Suabel:
+        summary:
+        geolocation: 647, 347
+
+    Antaria:
+        summary:
+        geolocation: 1091, 202
+
+    Dorian Dukedom:
+        summary:
+        geolocation: 590, 700
+
+    Republic of Masslavia:
+        summary:
+        geolocation: 574, 785
+
+    Acharis:
+        summary:
+        geolocation: 417, 871
+
+    Heliossar:
+        summary:
+        geolocation: 512, 993
+
+    Midolia:
+        summary:
+        geolocation: 649, 962
+
+    Thelassar:
+        summary:
+        geolocation: 713, 1036
+
+    Aquilin Counties:
+        summary:
+        geolocation: 795, 885
+
+    Nanimatchi:
+        summary:
+        geolocation: 871, 1045
+
+    Axolia:
+        summary:
+        geolocation: 980, 1086
+
+    Yumeimatchi:
+        summary:
+        geolocation: 1026, 1043
+
+    Balberith:
+        summary:
+        geolocation: 960, 1160
+
+    Sabarim:
+        summary:
+        geolocation: 748, 1185
+
+    Beth Asmavoth:
+        summary:
+        geolocation: 958, 1296
+
+    Nalavut:
+        summary:
+        geolocation: 852, 1410
+
+    Lilitian Sea:
+        summary:
+        geolocation: 1055, 1453
+
+    Akta:
+        summary:
+        geolocation: 768, 1572
+
+    Jenedun:
+        summary:
+        geolocation: 1211, 884
+
+    Keroskia:
+        summary:
+        geolocation: 1270, 837
+
+    Principality of Beelmon:
+        summary:
+        geolocation: 1377, 889
+
+    Svabodia:
+        summary:
+        geolocation: 1350, 682
+
+    Tieros Olim:
+        summary:
+        geolocation: 1170, 682
+
+    Slavinka:
+        summary:
+        geolocation: 1105, 586
+
+    Kuniski:
+        summary:
+        geolocation: 1098, 472
+
+    Lordanian Federation:
+        summary:
+        geolocation: 1352, 1312
+
+    Intragean Sea:
+        summary:
+        geolocation: 1199, 1147
+
+    Panhydrical Ocean:
+        summary:
+        geolocation: 1715, 947
+
+    Dioric Ocean:
+        summary:
+        geolocation: 811, 692
+
+    Endara:
+        summary:
+        geolocation: 1085, 164
+
+    Blassow:
+        summary:
+        geolocation: 1204, 171
+
+    Kosalam:
+        summary:
+        geolocation: 468, 564
+
+    Whussla:
+        summary:
+        geolocation: 399, 670
+
+    Nelm:
+        summary:
+        geolocation: 388, 804
+
+    Zorzas:
+        summary:
+        geolocation: 368, 954
+
+    Monon:
+        summary:
+        geolocation: 364, 1022
+
+    Holdamis:
+        summary:
+        geolocation: 502, 1065
+
+    Lukas:
+        summary:
+        geolocation: 577, 1119
+
+    Belez:
+        summary:
+        geolocation: 709, 1242
+
+    Nazur:
+        summary:
+        geolocation: 531, 885
+
+    Nimouk:
+        summary:
+        geolocation: 595, 678
+
+    Mastden:
+        summary:
+        geolocation: 681, 864
+
+    Denkos:
+        summary:
+        geolocation: 577, 948
+
+    Ghek:
+        summary:
+        geolocation: 712, 1095
+
+    Faeran:
+        summary:
+        geolocation: 818, 1146
+
+    Cazoar:
+        summary:
+        geolocation: 882, 1140
+
+    Salima:
+        summary:
+        geolocation: 781, 1248
+
+    Alifir:
+        summary:
+        geolocation: 869, 1228
+        #spy_message: "People here are very healthy, but quite ignorant. They don't know anything about thye Great Atomic Chaos that took place in Midolia."
+
+    Omrh:
+        summary:
+        geolocation: 868, 1363
+
+    Vladok:
+        summary:
+        geolocation: 980, 1430
+
+    Kitiika:
+        summary:
+        geolocation: 962, 1498
+
+    Kotlat:
+        summary:
+        geolocation: 837, 837
+
+    Bandjik:
+        summary:
+        geolocation: 884, 951
+
+    Quda:
+        summary:
+        geolocation: 929, 1072
+
+    Sedes Sancta:
+        summary:
+        geolocation: 998, 1153
+
+    Kioctl:
+        summary:
+        geolocation: 1102, 1200
+
+    Bethsech:
+        summary:
+        geolocation: 1027, 1265
+
+    Aklarvic:
+        summary:
+        geolocation: 772, 1543
+
+    Baynon:
+        summary:
+        geolocation: 1257, 1380
+        #spy_message: "This city is famous for its jewelry industry and its huge archeological museum. It seems no Akarith has ever been so deep into the 'miscreant continent'."
+
+    Ouram:
+        summary:
+        geolocation: 1491, 1245
+
+    Imuo:
+        summary:
+        geolocation: 1171, 1095
+
+    Helvitil:
+        summary:
+        geolocation: 1232, 969
+
+    Beelmon:
+        summary:
+        geolocation: 1443, 1016
+
+    Meelish:
+        summary:
+        geolocation: 1180, 841
+
+    Nuxia:
+        summary:
+        geolocation: 1106, 653
+
+    Douls:
+        summary:
+        geolocation: 1088, 515
+
+    Betsveda:
+        summary:
+        geolocation: 1345, 602
+
+    Halini:
+        summary:
+        geolocation: 1374, 742
+
+    Nuja:
+        summary: 1153, 745
+        geolocation:
+
+    Otzig:
+        summary:
+        geolocation: 934, 304
+
+    Vidastrit:
+        summary:
+        geolocation: 764, 408
 
 
 
