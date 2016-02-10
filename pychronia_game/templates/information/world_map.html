@@ -1,139 +1,22 @@
-<!--
-To change this template, choose Tools | Templates
-and open the template in the editor.
--->
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>World Map</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no" >
 
-        <link rel="stylesheet" rel="text/css" href="{{ STATIC_URL }}libs/interactive_world_map/css/main.css"/>
-    </head>
-    <script type="text/javascript" src="{{ STATIC_URL }}libs/interactive_world_map/js/jquery/jquery-2.1.0.js"/></script>
-<script type="text/javascript" src="{{ STATIC_URL }}libs/interactive_world_map/js/jquery_plugins/panzoom.js"/></script>
-<script type="text/javascript" src="{{ STATIC_URL }}libs/interactive_world_map/js/main.js"/></script>
-<div id="small_infobulle"></div>
-<body class="Vcentering">
-    <div class="placeholder Hcentering">
-    <section id="focal" class="conteneurCarte">
-        
-        <div id="pan-parent" class="parent">
+{% extends "base_one_giant_column.html" %}
 
-            <div class="panzoom carteMonde">
-                
-                <img  src="{{ STATIC_URL }}libs/interactive_world_map/images/maps/worlds/pangea_world_map_v10_8bits.png"  usemap="#planetmap">
-                <!--div class="" style="position:absolute;width:100%;height:80%">
-                <a href="//filipesilva.fr" ><div style="background-color:red;position:fixed;top:349px;left:459px;width:10px;height:10px" ></div></a>
-                </div-->
-                <map name="planetmap">
-                    
-                    <area id="Austrion_text" shape="rect" class="cardRef" coords="727,314,867,335" alt="Pays des guerriers Austrions" href="#Austrion_text">
-                    <area id="Baronies_text" shape="rect" class="cardRef" coords="867,243,952,261" alt="Sun" href="#Baronies_text">
-                    <area id="kingdomofSuabel_text" class="cardRef" shape="rect" coords="647,347,735,386" alt="Sun" href="#kingdomofSuabel_text">
-                    <area id="Antaria_text" class="cardRef" shape="rect" coords="1091,202,1166,221" alt="Sun" href="#Antaria_text">
-                    <area id="Dorian_Dukedom_text" class="cardRef" shape="rect" coords="590,700,692,745" alt="Sun" href="#Dorian_Dukedom_text">
-                    <area id="Republic_of_Masslavia_text" class="cardRef" shape="rect" coords="M,669,855" alt="Sun" href="#Republic_of_Masslavia_text">
-                    <area id="Acharis_text" class="cardRef" shape="rect" coords="417,871,491,891" alt="Sun" href="#Acharis_text">
-                    <area id="Heliossar_text" class="cardRef" shape="rect" coords="512,993,612,1019" alt="Sun" href="#Heliossar_text">
-                    <area id="Midolia_text" class="cardRef" shape="rect" coords="649,962,790,999" alt="Sun" href="#Midolia_text">
-                    <area id="Thelassar_text" class="cardRef" shape="rect" coords="713,1036,814,1062" alt="Sun" href="#Thelassar_text">
-                    <area id="Aquilin_Counties_text" class="cardRef" shape="rect" coords="795,885,892,935" alt="Sun" href="#Aquilin_Counties_text">
-                    <area id="Nanimatchi_text" class="cardRef" shape="rect" coords="871,1045,984,1063" alt="Sun" href="#Nanimatchi_text">
-                    <area id="Axolia_text" class="cardRef" shape="rect" coords="980,1086,1090,1118" alt="Sun" href="#Axolia_text">
-                    
-                    
-                    <area id="Yumeimatchi_text" class="cardRef" shape="rect" coords="1026,1043,1156,1066" alt="Sun" href="#Yumeimatchi_text">
-                    <area id="Balberith_text" class="cardRef" shape="rect" coords="960,1160,1051,1181" alt="Sun" href="#Balberith_text">
-                    <area id="Sabarim_text" class="cardRef" shape="rect" coords="748,1185,833,1206" alt="Sun" href="#Sabarim_text">
-                    <area id="Beth_Asmavoth_text" class="cardRef" shape="rect" coords="958,1296,1110,1318" alt="Sun" href="#Beth_Asmavoth_text">
-                    <area id="Nalavut_text" class="cardRef" shape="rect" coords="852,1410,935,1433" alt="Sun" href="#Nalavut_text">
-                    <area id="Lilitian_Sea_text" class="cardRef" shape="rect" coords="1055,1453,1205,1482" alt="Sun" href="#Lilitian_Sea_text">
-                    <area id="Akta_text" class="cardRef" shape="rect" coords="768,1572,819,1594" alt="Sun" href="#Akta_text">
-                    <area id="Jenedun_text" class="cardRef" shape="rect" coords="1211,884,1299,908" alt="Sun" href="#Jenedun_text">
-                    <area id="Keroskia_text" class="cardRef" shape="rect" coords="1270,837,1421,870" alt="Sun" href="#Keroskia_text">
-                    <area id="Principality_of_Beelmon_text" class="cardRef" shape="rect" coords="1377,889,1496,966" alt="Sun" href="#Principality_of_Beelmon_text">
-                    <area id="Svabodia_text" class="cardRef" shape="rect" coords="1350,682,1446,705" alt="Sun" href="#Svabodia_text">
-                    <area id="Tieros_Olim_text" class="cardRef" shape="rect" coords="1170,682,1295,706" alt="Sun" href="#Tieros_Olim_text">
-                    <area id="Slavinka_text" class="cardRef" shape="rect" coords="1105,586,1197,609" alt="Sun" href="#Slavinka_text">
-                    <area id="Kunisky_text" class="cardRef" shape="rect" coords="1098,472,1185,493" alt="Sun" href="#Kunisky_text">
-                    <area id="Lordanian_federation_text" class="cardRef" shape="rect" coords="1352,1312,1468,1363" alt="Sun" href="#Lordanian_federation_text">
-                    <area id="Intragean_Sea_text" class="cardRef" shape="rect" coords="1199,1147,1372,1176" alt="Sun" href="#Intragean_Sea_text">
-                    <area id="Panhydrical_Ocean_text" class="cardRef" shape="rect" coords="1715,947,1958,980" alt="Sun" href="#Panhydrical_Ocean_text">
-                    <area id="Dioric_Ocean_text" class="cardRef" shape="rect" coords="811,692,986,724" alt="Sun" href="#Dioric_Ocean_text">
-                    
-                    
-                    <area id="Endara_point" class="cardRef" shape="circle" coords="1085,164,10" alt="Endara_point" href="#Endara_point">
-                    <area id="Blassow_point" class="cardRef" shape="circle" coords="1204,171,10" alt="Blassow_point" href="#Blassow_point">
-                    <area id="Kosalam_point" class="cardRef" shape="circle" coords="468,564,10" alt="Kosalam_point" href="#Kosalam_point">
-                    <area id="Whussla_point" class="cardRef" shape="circle" coords="399,670,10" alt="Whussla_point" href="#Whussla_point">
-                    <area id="Nelm_point" class="cardRef" shape="circle" coords="388,804,10" alt="Nelm_point" href="#Nelm_point">
-                    <area id="Zorzas_point" class="cardRef" shape="circle" coords="368,954,10" alt="Zorzas_point" href="#Zorzas_point">
-                    <area id="Monon_point" class="cardRef" shape="circle" coords="364,1022,10" alt="Monon_point" href="#Monon_point">
-                    <area id="Holdamis_point" class="cardRef" shape="circle" coords="502,1065,10" alt="Holdamis_point" href="#Holdamis_point">
-                    <area id="Lukas_point" class="cardRef" shape="circle" coords="577,1119,10" alt="Lukas_point" href="#Lukas_point">
-                    <area id="Belez_point" class="cardRef" shape="circle" coords="709,1242,10" alt="Belez_point" href="#Belez_point">
-                    <area id="Nazur_point" class="cardRef" shape="circle" coords="531,885,10" alt="Nazur_point" href="#Nazur_point">
-                    <area id="Nimouk_point" class="cardRef" shape="circle" coords="595,678,10" alt="Nimouk_point" href="#Nimouk_point">
-                    <area id="Mastden_point" class="cardRef" shape="circle" coords="681,864,10" alt="Mastden_point" href="#Mastden_point">
-                    <area id="Denkos_point" class="cardRef" shape="circle" coords="577,948,10" alt="Denkos_point" href="#Denkos_point">
-                    <area id="Ghek_point" class="cardRef" shape="circle" coords="712,1095,10" alt="Ghek_point" href="#Ghek_point">
-                    <area id="Faeran_point" class="cardRef" shape="circle" coords="818,1146,10" alt="Faeran_point" href="#Faeran_point">
-                    <area id="Cazoar_point" class="cardRef" shape="circle" coords="882,1140,10" alt="Cazoar_point" href="#Cazoar_point">
-                    <area id="Salima_point" class="cardRef" shape="circle" coords="781,1248,10" alt="Salima_point" href="#Salima_point">
-                    <area id="Alifir_point" class="cardRef" shape="circle" coords="869,1228,10" alt="Alifir_point" href="#Alifir_point">
-                    <area id="Omrh_point" class="cardRef" shape="circle" coords="868,1363,10" alt="Omrh_point" href="#Omrh_point">
-                    <area id="Vladok_point" class="cardRef" shape="circle" coords="980,1430,10" alt="Vladok_point" href="#Vladok_point">
-                    <area id="Kitiika_point" class="cardRef" shape="circle" coords="962,1498,10" alt="Kitiika_point" href="#Kitiika_point">
-                    <area id="Kotlat_point" class="cardRef" shape="circle" coords="837,837,10" alt="Kotlat_point" href="#Kotlat_point">
-                    <area id="Bandjik_point" class="cardRef" shape="circle" coords="884,951,10" alt="Bandjik_point" href="#Bandjik_point">
-                    <area id="Quda_point" class="cardRef" shape="circle" coords="929,1072,10" alt="Quda_point" href="#Quda_point">
-                    <area id="Sedes_Sancta_point" class="cardRef" shape="circle" coords="998,1153,10" alt="Sedes_Sancta_point" href="#Sedes_Sancta_point">
-                    <area id="Kioctl_point" class="cardRef" shape="circle" coords="1102,1200,10" alt="Kioctl_point" href="#Kioctl_point">
-                    <area id="Bethsech_point" class="cardRef" shape="circle" coords="1027,1265,10" alt="Bethsech_point" href="#Bethsech_point">
-                    <area id="Aklarvik_point" class="cardRef" shape="circle" coords="772,1543,10" alt="Sun" href="#Aklarvik_point">
-                    <area id="Baynon_point" class="cardRef" shape="circle" coords="1257,1380,10" alt="Sun" href="#Baynon_point">
-                    <area id="Ouram_point" class="cardRef" shape="circle" coords="1491,1245,10" alt="Sun" href="#Ouram_point">
-                    <area id="Imuo_point" class="cardRef" shape="circle" coords="1171,1095,10" alt="Sun" href="#Imuo_point">
-                    <area id="Helvitil_point" class="cardRef" shape="circle" coords="1232,969,10" alt="Sun" href="#Helvitil_point">
-                    <area id="Beelmon_point" class="cardRef" shape="circle" coords="1443,1016,10" alt="Sun" href="#Beelmon_point">
-                    <area id="Meelish_point" class="cardRef" shape="circle" coords="1180,841,10" alt="Sun" href="#Meelish_point">
-                    <area id="Nuxia_point" class="cardRef" shape="circle" coords="1106,653,10" alt="Sun" href="#Nuxia_point">
-                    <area id="Douls_point" class="cardRef" shape="circle" coords="1088,515,10" alt="Sun" href="#Douls_point">
-                    <area id="Betsveda_point" class="cardRef" shape="circle" coords="1345,602,10" alt="Sun" href="#Betsveda_point">
-                    <area id="Halini_point" class="cardRef" shape="circle" coords="1374,742,10" alt="Sun" href="#Halini_point">
-                    <area id="Nuja_point" class="cardRef" shape="circle" coords="1153,745,10" alt="Sun" href="#Nuja_point">
-                    <area id="Otzig_point" class="cardRef" shape="circle" coords="934,304,10" alt="Sun" href="#Otzig_point">
-                    <area id="vidastrit_point" class="cardRef" shape="circle" coords="764,408,10" alt="Sun" href="#vidastrit_point">
-                    
-                    
-                    
-                    
-                    <!--area id="Austrion_map" shape="rect" coords="617,221,970,417" alt="Sun" href="#Austrion_map"-->
-                    
-                </map>
-                
-            </div>
-            
+{% load i18n helpers %}
 
-        </div>
-        <!--div id="text" style="color:white">
-            offsetX: 886 offsetY: 9 width 1110 height 448 percentWidth 79.81981981981981 percentHeight 2.0089285714285716 newwidth0 newheight0
-        </div-->
 
-        <!--script>
-            (function() {
-                
-                
-                
-            })();
-            
-        </script-->
-    </section>
-        </div>
-    <br>
-    
-</body>
 
-</html>
+{% block content %}
+
+    <div class="inner_center">
+        <a class="zoomable" href="{% game_file_url world_map_image %}" rel="{% game_file_url world_map_image %}">
+            <img src="{% game_file_img world_map_image alias="giant_width" %}"/>
+        </a>
+        <br/><br/>
+        <b><a href="{% game_file_url world_map_image_bw %}">{% trans "Download a simplified, printable world map." %}</a></b>
+    </div>
+    <br/>
+
+{% endblock %}
+
+
+

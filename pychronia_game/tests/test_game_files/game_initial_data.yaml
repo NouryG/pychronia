@@ -180,298 +180,298 @@ global_parameters:
 locations:
 
     Austrions:
-        summary:
-        geolocation: [727, 314]
+        summary: "Pays des Guerriers Austrions"
+        geolocation: [727,314,867,335]
 
     Baronies:
         summary:
-        geolocation: [867, 243]
+        geolocation: [867,243,952,261]
 
     Kingdom_of_Suabel:
         summary:
-        geolocation: [647, 347]
+        geolocation: [647,347,735,386]
 
     Antaria:
         summary:
-        geolocation: [1091, 202]
+        geolocation: [1091,202,1166,221]
 
     Dorian_Dukedom:
         summary:
-        geolocation: [590, 700]
+        geolocation: [590,700,692,745]
 
     Republic_of_Masslavia:
         summary:
-        geolocation: [574, 785]
+        geolocation: [574,785,669,855]
 
     Acharis:
         summary:
-        geolocation: [417, 871]
+        geolocation: [417,871,491,891]
 
     Heliossar:
         summary:
-        geolocation: [512, 993]
+        geolocation: [512,993,612,1019]
 
     Midolia:
         summary:
-        geolocation: [649, 962]
+        geolocation: [649,962,790,999]
 
     Thelassar:
         summary:
-        geolocation: [713, 1036]
+        geolocation: [713,1036,814,1062]
 
     Aquilin_Counties:
         summary:
-        geolocation: [795, 885]
+        geolocation: [795,885,892,935]
 
     Nanimatchi:
         summary:
-        geolocation: [871, 1045]
+        geolocation: [871,1045,984,1063]
 
     Axolia:
         summary:
-        geolocation: [980, 1086]
+        geolocation: [980,1086,1090,1118]
 
     Yumeimatchi:
         summary:
-        geolocation: [1026, 1043]
+        geolocation: [1026,1043,1156,1066]
 
     Balberith:
         summary:
-        geolocation: [960, 1160]
+        geolocation: [960,1160,1051,1181]
 
     Sabarim:
         summary:
-        geolocation: [748, 1185]
+        geolocation: [748,1185,833,1206]
 
     Beth_Asmavoth:
         summary:
-        geolocation: [958, 1296]
+        geolocation: [958,1296,1110,1318]
 
     Nalavut:
         summary:
-        geolocation: [852, 1410]
+        geolocation: [852,1410,935,1433]
 
     Lilitian_Sea:
         summary:
-        geolocation: [1055, 1453]
+        geolocation: [1055,1453,1205,1482]
 
     Akta:
         summary:
-        geolocation: [768, 1572]
+        geolocation: [768,1572,819,1594]
 
     Jenedun:
         summary:
-        geolocation: [1211, 884]
+        geolocation: [1211,884,1299,908]
 
     Keroskia:
         summary:
-        geolocation: [1270, 837]
+        geolocation: [1270,837,1421,870]
 
     Principality_of_Beelmon:
         summary:
-        geolocation: [1377, 889]
+        geolocation: [1377,889,1496,966]
 
     Svabodia:
         summary:
-        geolocation: [1350, 682]
+        geolocation: [1350,682,1446,705]
 
     Tieros_Olim:
         summary:
-        geolocation: [1170, 682]
+        geolocation: [1170,682,1295,706]
 
     Slavinka:
         summary:
-        geolocation: [1105, 586]
+        geolocation: [1105,586,1197,609]
 
     Kuniski:
         summary:
-        geolocation: [1098, 472]
+        geolocation: [1098,472,1185,493]
 
     Lordanian_Federation:
         summary:
-        geolocation: [1352, 1312]
+        geolocation: [1352,1312,1468,1363]
 
     Intragean_Sea:
         summary:
-        geolocation: [1199, 1147]
+        geolocation: [1199,1147,1372,1176]
 
     Panhydrical_Ocean:
         summary:
-        geolocation: [1715, 947]
+        geolocation: [1715,947,1958,980]
 
     Dioric_Ocean:
         summary:
-        geolocation: [811, 692]
+        geolocation: [811,692,986,724]
 
     Endara:
         summary:
-        geolocation: [1085, 164]
+        geolocation: [1085,164,10]
 
     Blassow:
         summary:
-        geolocation: [1204, 171]
+        geolocation: [1204,171,10]
 
     Kosalam:
         summary:
-        geolocation: [468, 564]
+        geolocation: [468,564,10]
 
     Whussla:
         summary:
-        geolocation: [399, 670]
+        geolocation: [399,670,10]
 
     Nelm:
         summary:
-        geolocation: [388, 804]
+        geolocation: [388,804,10]
 
     Zorzas:
         summary:
-        geolocation: [368, 954]
+        geolocation: [368,954,10]
 
     Monon:
         summary:
-        geolocation: [364, 1022]
+        geolocation: [364,1022,10]
 
     Holdamis:
         summary:
-        geolocation: [502, 1065]
+        geolocation: [502,1065,10]
 
     Lukas:
         summary:
-        geolocation: [577, 1119]
+        geolocation: [577,1119,10]
 
     Belez:
         summary:
-        geolocation: [709, 1242]
+        geolocation: [709,1242,10]
 
     Nazur:
         summary:
-        geolocation: [531, 885]
+        geolocation: [531,885,10]
 
     Nimouk:
         summary:
-        geolocation: [595, 678]
+        geolocation: [595,678,10]
 
     Mastden:
         summary:
-        geolocation: [681, 864]
+        geolocation: [681,864,10]
 
     Denkos:
         summary:
-        geolocation: [577, 948]
+        geolocation: [577,948,10]
 
     Ghek:
         summary:
-        geolocation: [712, 1095]
+        geolocation: [712,1095,10]
 
     Faeran:
         summary:
-        geolocation: [818, 1146]
+        geolocation: [818,1146,10]
 
     Cazoar:
         summary:
-        geolocation: [882, 1140]
+        geolocation: [882,1140,10]
 
     Salima:
         summary:
-        geolocation: [781, 1248]
+        geolocation: [781,1248,10]
 
     Alifir:
         summary:
-        geolocation: [869, 1228]
+        geolocation: [869,1228,10]
         #spy_message: "People here are very healthy, but quite ignorant. They don't know anything about thye Great Atomic Chaos that took place in Midolia."
 
     Omrh:
         summary:
-        geolocation: [868, 1363]
+        geolocation: [868,1363,10]
 
     Vladok:
         summary:
-        geolocation: [980, 1430]
+        geolocation: [980,1430,10]
 
     Kitiika:
         summary:
-        geolocation: [962, 1498]
+        geolocation: [962,1498,10]
 
     Kotlat:
         summary:
-        geolocation: [837, 837]
+        geolocation: [837,837,10]
 
     Bandjik:
         summary:
-        geolocation: [884, 951]
+        geolocation: [884,951,10]
 
     Quda:
         summary:
-        geolocation: [929, 1072]
+        geolocation: [929,1072,10]
 
     Sedes_Sancta:
         summary:
-        geolocation: [998, 1153]
+        geolocation: [998,1153,10]
 
     Kioctl:
         summary:
-        geolocation: [1102, 1200]
+        geolocation: [1102,1200,10]
 
     Bethsech:
         summary:
-        geolocation: [1027, 1265]
+        geolocation: [1027,1265,10]
 
     Aklarvic:
         summary:
-        geolocation: [772, 1543]
+        geolocation: [772,1543,10]
 
     Baynon:
         summary:
-        geolocation: [1257, 1380]
+        geolocation: [1257,1380,10]
         #spy_message: "This city is famous for its jewelry industry and its huge archeological museum. It seems no Akarith has ever been so deep into the 'miscreant continent'."
 
     Ouram:
         summary:
-        geolocation: [1491, 1245]
+        geolocation: [1491,1245,10]
 
     Imuo:
         summary:
-        geolocation: [1171, 1095]
+        geolocation: [1171,1095,10]
 
     Helvitil:
         summary:
-        geolocation: [1232, 969]
+        geolocation: [1232,969,10]
 
     Beelmon:
         summary:
-        geolocation: [1443, 1016]
+        geolocation: [1443,1016,10]
 
     Meelish:
         summary:
-        geolocation: [1180, 841]
+        geolocation: [1180,841,10]
 
     Nuxia:
         summary:
-        geolocation: [1106, 653]
+        geolocation: [1106,653,10]
 
     Douls:
         summary:
-        geolocation: [1088, 515]
+        geolocation: [1088,515,10]
 
     Betsveda:
         summary:
-        geolocation: [1345, 602]
+        geolocation: [1345,602,10]
 
     Halini:
         summary:
-        geolocation: [1374, 742]
+        geolocation: [1374,742,10]
 
     Nuja:
         summary:
-        geolocation: [1153, 745]
+        geolocation: [1153,745,10]
 
     Otzig:
         summary:
-        geolocation: [934, 304]
+        geolocation: [934,304,10]
 
     Vidastrit:
         summary:
-        geolocation: [764, 408]
+        geolocation: [764,408,10]
 
 
 
