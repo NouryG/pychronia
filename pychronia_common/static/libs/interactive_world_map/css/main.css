@@ -1,12 +1,12 @@
-/* 
-    Document   : main
-    Created on : 22 févr. 2014, 00:34:49
-    Author     : Filipe
-    Description:
-        Purpose of the stylesheet follows.
-*/
+/*
+ Document   : main
+ Created on : 22 févr. 2014, 00:34:49
+ Author     : Filipe
+ Description:
+ Purpose of the stylesheet follows.
+ */
 
-root { 
+root {
     display: block;
 }
 
@@ -17,106 +17,108 @@ body{
     position:absolute;
     width:100%;
     height:100%;
+    margin:0;
+    
     
     
 }
-
 
 .Vcentering{
-/* Safari, Opera, and Chrome */
-display:-webkit-box;
--webkit-box-pack:center;
--webkit-box-orient: vertical;
--webkit-box-align:strech;
+    /* Safari, Opera, and Chrome */
+    display:-webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-orient: vertical;
+    -webkit-box-align:strech;
 }
 .Hcentering{
-  /* Safari, Opera, and Chrome */
-display:-webkit-box;
--webkit-box-pack:center;
--webkit-box-orient: horizontal;
--webkit-box-align:strech;
-
+    /* Safari, Opera, and Chrome */
+    display:-webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-align:strech;
+    
 }
 
-
+.buttons{
+    background-color: transparent;
+    z-index: 100;
+    
+}
 .conteneurCarte{
     padding:0;
-    margin:0;
+    margin:0px;
     background-color: rgba(255,255,255,.3);
-    width:70%;
-    height:70%;
-    overflow:hidden;  
-    border: solid 1px red;
-        border-color: blue;
-        border-radius: 30px;
-        -webkit-box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.5);
-        
-        background: -moz-linear-gradient(top,  rgba(30,87,153,0.56) 0%, rgba(41,137,216,0.55) 50%, rgba(32,124,202,0.55) 51%, rgba(125,185,232,0.54) 100%);
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,0.56)), color-stop(50%,rgba(41,137,216,0.55)), color-stop(51%,rgba(32,124,202,0.55)), color-stop(100%,rgba(125,185,232,0.54)));
-background: -webkit-linear-gradient(top,  rgba(30,87,153,0.56) 0%,rgba(41,137,216,0.55) 50%,rgba(32,124,202,0.55) 51%,rgba(125,185,232,0.54) 100%);
-background: -o-linear-gradient(top,  rgba(30,87,153,0.56) 0%,rgba(41,137,216,0.55) 50%,rgba(32,124,202,0.55) 51%,rgba(125,185,232,0.54) 100%);
-background: -ms-linear-gradient(top,  rgba(30,87,153,0.56) 0%,rgba(41,137,216,0.55) 50%,rgba(32,124,202,0.55) 51%,rgba(125,185,232,0.54) 100%);
-background: linear-gradient(to bottom,  rgba(30,87,153,0.56) 0%,rgba(41,137,216,0.55) 50%,rgba(32,124,202,0.55) 51%,rgba(125,185,232,0.54) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8f1e5799', endColorstr='#8a7db9e8',GradientType=0 );
-
-
-
-        
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    
+    
+    background: -moz-linear-gradient(top,  rgba(30,87,153,0.56) 0%, rgba(41,137,216,0.55) 50%, rgba(32,124,202,0.55) 51%, rgba(125,185,232,0.54) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,0.56)), color-stop(50%,rgba(41,137,216,0.55)), color-stop(51%,rgba(32,124,202,0.55)), color-stop(100%,rgba(125,185,232,0.54)));
+    background: -webkit-linear-gradient(top,  rgba(30,87,153,0.56) 0%,rgba(41,137,216,0.55) 50%,rgba(32,124,202,0.55) 51%,rgba(125,185,232,0.54) 100%);
+    background: -o-linear-gradient(top,  rgba(30,87,153,0.56) 0%,rgba(41,137,216,0.55) 50%,rgba(32,124,202,0.55) 51%,rgba(125,185,232,0.54) 100%);
+    background: -ms-linear-gradient(top,  rgba(30,87,153,0.56) 0%,rgba(41,137,216,0.55) 50%,rgba(32,124,202,0.55) 51%,rgba(125,185,232,0.54) 100%);
+    background: linear-gradient(to bottom,  rgba(30,87,153,0.56) 0%,rgba(41,137,216,0.55) 50%,rgba(32,124,202,0.55) 51%,rgba(125,185,232,0.54) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8f1e5799', endColorstr='#8a7db9e8',GradientType=0 );
+    
+    
+    
+    
 }
 #pan-parent{
     width:100%;
     height:100%;
-/*      background-color: slateblue;*/
-
+    /*      background-color: slateblue;*/
+    
 }
 
 .carteMonde{
-
-/*    background-color: bisque;*/
-   
+    
+    /*    background-color: bisque;*/
+    
     width: 100%;
     height:100%;
     
-   
+    
 }
 #small_infobulle{
     width:auto;
     height:auto;
     
-        visibility:hidden;
-        background-color: yellow;
-        
-        border: solid 1px red;
-        border-color: black;
-        border-radius: 10px;
-        -webkit-box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.5);
-            padding:10px;
-            position:absolute;
+    visibility:hidden;
+    background-color: yellow;
+    
+    border: solid 1px red;
+    border-color: black;
+    border-radius: 10px;
+    -webkit-box-shadow: 5px 5px 20px 5px rgba(0,0,0,0.5);
+    padding:10px;
+    position:absolute;
     top:0px;
     left:0px;
     z-index:3000;
 }
 .panzoom{
     
-/*    background-color: blueviolet;*/
+    /*    background-color: blueviolet;*/
     position:absolute;
-     margin:auto;
-
-    /*left:25%;*/
-/*    -webkit-transform:  matrix(.2,0,0,.2,0,0);*/
-/*    -webkit-transform-origin:  0 0;*/
+    margin:0 px;
     
-    -webkit-transform:  scale(.3)  translate(-50%,-105%);
+    /*left:25%;*/
+    /*    -webkit-transform:  matrix(.2,0,0,.2,0,0);*/
+    /*    -webkit-transform-origin:  0 0;*/
+    
+    -webkit-transform:  scale(.4)  translate(-35%,-90%);
 }
 .panzoom img{
     width:2200px;
     height:1773px;
     position:absolute;
     
-   
+    
 }
 .placeholder{
-/*    margin:auto;*/
+    /*    margin:auto;*/
     width:100%;
     height:100%;
     position:absolute;

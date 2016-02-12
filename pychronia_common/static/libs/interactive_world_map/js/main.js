@@ -39,6 +39,14 @@ $('html').on('mousemove',function(e){
 
 
 $(document).ready(function(){
+                  
+    $section = $('section').first();
+    $section.find('.panzoom').panzoom({
+                                        $zoomIn: $section.find(".zoom-in"),
+                                        $zoomOut: $section.find(".zoom-out"),
+                                        $reset: $section.find(".reset")
+                                        });
+
 
     $section = $('#focal');
     $panzoom = $section.find('.panzoom').panzoom();
@@ -53,7 +61,7 @@ $(document).ready(function(){
                     $panzoom.panzoom('zoom', zoomOut, {
                         increment: .05,
                         focal: e,
-                        minScale: .3,
+                        minScale: .4,
                         maxScale: 1,
                         transition: true
                         
