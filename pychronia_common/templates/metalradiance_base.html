@@ -1,13 +1,11 @@
+{% extends "html_skeleton.html" %}
 {% load sekizai_tags kwacros i18n %}
 {% load cms_tags %}{# might be a dummy version, to replace that of django-cms #}
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title>{% block html_title %}{% trans "Welcome" %}{% endblock %}</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    {% render_block "meta" %}
+{% block sekizai_calls %}
+{{super.block}}
+
+{% addtoblock "meta" %}
 
     {# <!--meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9"-->emulate IE9 in quirks or normal mode, for IE10 to enable pie.htc behavior... TOO BUGGY #}
 
@@ -33,8 +31,10 @@
     <![endif]-->
 
     <link href="{{ STATIC_URL }}libs/jnotify/css/jquery.jnotify-alt.css" rel="stylesheet" type="text/css" />
+    
+{% endaddtoblock %}
 
-    {% render_block "css" %}
+{% addtoblock "css" %}
 
 
 
@@ -88,7 +88,9 @@
         });
     </script>
 
-    {% render_block "js" %}
+{% endaddtoblock %}
+
+{% addtoblock "js" %}
 
 
     <script language="javascript" type="text/javascript">
@@ -144,16 +146,13 @@
 
     </script>
 
+{% endaddtoblock %}
 
-    {% block html_headers %}
-    {% endblock %}
+{% endblock %}
 
-    {% block sekizai_calls %}
-        <!-- block solely used to place sekizai calls in sub-templates, must always call "block.super" -->
-    {% endblock %}
+{% block body_attributes %}class="full_background"{% endblock %}
 
-</head>
-<body {% if not use_parallax %}class="full_background"{% endif %}>
+{% block full_body %}
 
     {% cms_toolbar %}
 
@@ -343,6 +342,8 @@
         &nbsp;
     </div>
     {% endblock %}
+
+{% endblock %}
 
 
 

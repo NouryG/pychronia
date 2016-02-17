@@ -1,65 +1,72 @@
-<!--
- To change this template, choose Tools | Templates
- and open the template in the editor.
- -->
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>World Map</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-            <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no" >
-                
-                <link rel="stylesheet" rel="text/css" href="{{ STATIC_URL }}libs/interactive_world_map/css/main.css"/>
-                </head>
-    <script type="text/javascript" src="{{ STATIC_URL }}libs/interactive_world_map/js/jquery/jquery-2.1.0.js"/></script>
-    <script type="text/javascript" src="{{ STATIC_URL }}libs/interactive_world_map/js/jquery_plugins/panzoom.js"/></script>
-    <script type="text/javascript" src="{{ STATIC_URL }}libs/interactive_world_map/js/main.js"/></script>
-    <div id="small_infobulle"></div>
+
+{% extends "html_skeleton.html" %}
+{% load sekizai_tags kwacros i18n %}
+{% load cms_tags %}{# might be a dummy version, to replace that of django-cms #}
+
+{% block html_title %} {% trans "World Map" %} {% endblock %}
+
+
+{% block sekizai_calls %}
+{{ block.super }}
+
+
+{% addtoblock "css" %}
+<link rel="stylesheet" rel="text/css" href="{{ STATIC_URL }}libs/interactive_world_map/css/main.css"/>
+{% endaddtoblock %}
+
+{% addtoblock "js" %}
+<script type="text/javascript" src="{{ STATIC_URL }}libs/interactive_world_map/js/jquery_plugins/panzoom.js"/></script>
+<script type="text/javascript" src="{{ STATIC_URL }}libs/interactive_world_map/js/main.js"/></script>
+{% endaddtoblock %}
+
+{% endblock %}
+
+{% block full_body %}
+
+<div id="small_infobulle"></div>
+
+
+<div class="Vcentering">
     
     
-    <body class="Vcentering">
+    <div class="placeholder Hcentering">
         
         
-        <div class="placeholder Hcentering">
+        <section id="focal" class="conteneurCarte">
+            <div class="buttons">
+                <button class="zoom-in">Zoom In</button>
+                <button class="zoom-out">Zoom Out</button>
+                <button class="reset">Reset</button>
+            </div>
             
-            
-            <section id="focal" class="conteneurCarte">
-                <div class="buttons">
-                    <button class="zoom-in">Zoom In</button>
-                    <button class="zoom-out">Zoom Out</button>
-                    <button class="reset">Reset</button>
-                </div>
+            <div id="pan-parent" class="parent">
                 
-                <div id="pan-parent" class="parent">
+                <div class="panzoom carteMonde">
                     
-                    <div class="panzoom carteMonde">
-                        
-                        
-                        <img  src="{{ STATIC_URL }}libs/interactive_world_map/images/maps/worlds/pangea_world_map_v10_8bits.png"  usemap="#planetmap">
-                            <map name="planetmap">
-                                {% for place, data in all_locations.items %}
+                    
+                    <img width="2200" height="1773" src="{{ STATIC_URL }}libs/interactive_world_map/images/maps/worlds/pangea_world_map_v10_8bits.png"  usemap="#planetmap">
+                        <map name="planetmap">
+                            {% for place, data in all_locations.items %}
+                            
+                            {% if data.geolocation|length = 4 %}
+                            
+                            <area id="{{place}}_text" shape="rect" class="cardRef" coords="{{data.geolocation}}" alt="{{data.summary}}" href="#{{place}}_text">
                                 
-                                {% if data.geolocation|length = 4 %}
-                                
-                                <area id="{{place}}_text" shape="rect" class="cardRef" coords="{{data.geolocation}}" alt="{{data.summary}}" href="#{{place}}_text">
-                                    
                                 {% else %}
                                 
                                 <area id="{{place}}_point" shape="circle" class="cardRef" coords="{{data.geolocation}}" alt="{{data.summary}}" href="#{{place}}_point">
                                     
-                                {% endif %}
-                                {% endfor %}
+                                    {% endif %}
+                                    {% endfor %}
                                     
-                                    </map>
-                            
-                            </div>
-                    
-                    
+                        </map>
+                        
                 </div>
-            </section>
-        </div>
-        <br>
-        
-    </body>
-    
-</html>
+                
+                
+            </div>
+        </section>
+    </div>
+</div>
+
+{% endblock %}
