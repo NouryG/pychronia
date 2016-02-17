@@ -36,8 +36,6 @@ $('html').on('mousemove',function(e){
 
 });
 
-
-
 $(document).ready(function(){
                   
     $section = $('section').first();
@@ -52,6 +50,8 @@ $(document).ready(function(){
     $panzoom = $section.find('.panzoom').panzoom();
     
     
+    
+    
 
 
     $panzoom.parent().on('mousewheel.focal', function(e) {
@@ -63,7 +63,9 @@ $(document).ready(function(){
                         focal: e,
                         minScale: .4,
                         maxScale: 1,
-                        transition: true
+                        transition: true,
+                        
+                        
                         
                         
                     });
