@@ -28,14 +28,14 @@ body{
     display:-webkit-box;
     -webkit-box-pack:center;
     -webkit-box-orient: vertical;
-    -webkit-box-align:strech;
+    -webkit-box-align:stretch;
 }
 .Hcentering{
     /* Safari, Opera, and Chrome */
     display:-webkit-box;
     -webkit-box-pack:center;
     -webkit-box-orient: horizontal;
-    -webkit-box-align:strech;
+    -webkit-box-align:stretch;
     
 }
 
@@ -46,40 +46,23 @@ body{
     
 }
 .conteneurCarte{
-    padding:0px;
-    margin:0px;
-    background-color: rgba(255,255,255,.3);
     width:100%;
     height:100%;
     overflow:hidden;
-    
-    
-    background: -moz-linear-gradient(top,  rgba(30,87,153,0.56) 0%, rgba(41,137,216,0.55) 50%, rgba(32,124,202,0.55) 51%, rgba(125,185,232,0.54) 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,0.56)), color-stop(50%,rgba(41,137,216,0.55)), color-stop(51%,rgba(32,124,202,0.55)), color-stop(100%,rgba(125,185,232,0.54)));
-    background: -webkit-linear-gradient(top,  rgba(30,87,153,0.56) 0%,rgba(41,137,216,0.55) 50%,rgba(32,124,202,0.55) 51%,rgba(125,185,232,0.54) 100%);
-    background: -o-linear-gradient(top,  rgba(30,87,153,0.56) 0%,rgba(41,137,216,0.55) 50%,rgba(32,124,202,0.55) 51%,rgba(125,185,232,0.54) 100%);
-    background: -ms-linear-gradient(top,  rgba(30,87,153,0.56) 0%,rgba(41,137,216,0.55) 50%,rgba(32,124,202,0.55) 51%,rgba(125,185,232,0.54) 100%);
-    background: linear-gradient(to bottom,  rgba(30,87,153,0.56) 0%,rgba(41,137,216,0.55) 50%,rgba(32,124,202,0.55) 51%,rgba(125,185,232,0.54) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8f1e5799', endColorstr='#8a7db9e8',GradientType=0 );
-    
-    
     
     
 }
 #pan-parent{
     width:100%;
     height:100%;
-    /*      background-color: slateblue;*/
     
 }
 
 .carteMonde{
     
-    /*    background-color: bisque;*/
-    
     width: 100%;
     height:100%;
-    
+    text-align:center;
     
 }
 #small_infobulle{
@@ -101,20 +84,16 @@ body{
 }
 .panzoom{
     
-    /*    background-color: blueviolet;*/
-    position:absolute;
     margin:0 px;
     
     /*left:25%;*/
     /*    -webkit-transform:  matrix(.2,0,0,.2,0,0);*/
     /*    -webkit-transform-origin:  0 0;*/
     
-    -webkit-transform:  scale(.4)  translate(-35%,-90%);
 }
 .panzoom img{
-    width:2200px;
-    height:1773px;
-    position:absolute;
+    max-width: 100%;
+    max-height: 100%;
     
     
 }

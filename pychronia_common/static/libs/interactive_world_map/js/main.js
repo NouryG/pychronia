@@ -61,8 +61,8 @@ $(document).ready(function(){
                     $panzoom.panzoom('zoom', zoomOut, {
                         increment: .05,
                         focal: e,
-                        minScale: .4,
-                        maxScale: 1,
+                        minScale: 1,
+                        maxScale: 3,
                         transition: true,
                         
                         

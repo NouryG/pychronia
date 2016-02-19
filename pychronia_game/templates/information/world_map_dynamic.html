@@ -16,7 +16,20 @@
 
 {% addtoblock "js" %}
 <script type="text/javascript" src="{{ STATIC_URL }}libs/interactive_world_map/js/jquery_plugins/panzoom.js"/></script>
+<script type="text/javascript" src="{{ STATIC_URL }}libs/interactive_world_map/js/jquery_plugins/imageMapResizer.min.js"/></script>
 <script type="text/javascript" src="{{ STATIC_URL }}libs/interactive_world_map/js/main.js"/></script>
+<script type="text/javascript" src="{{ STATIC_URL }}libs/waitForImages/dist/jquery.waitforimages.min.js"/></script>
+{% endaddtoblock %}
+
+{% addtoblock "definition_js" %}
+
+
+
+{% endaddtoblock %}
+
+{% addtoblock "onload_js" %}
+
+
 {% endaddtoblock %}
 
 {% endblock %}
@@ -44,17 +57,18 @@
                 <div class="panzoom carteMonde">
                     
                     
-                    <img width="2200" height="1773" src="{{ STATIC_URL }}libs/interactive_world_map/images/maps/worlds/pangea_world_map_v10_8bits.png"  usemap="#planetmap">
-                        <map name="planetmap">
+                    <img src="{{ STATIC_URL }}libs/interactive_world_map/images/maps/worlds/pangea_world_map_v10_8bits.png"  usemap="#planetmap" id="imagemap">
+                        <map  id="map" name="planetmap">
                             {% for place, data in all_locations.items %}
                             
                             {% if data.geolocation|length = 4 %}
                             
-                            <area id="{{place}}_text" shape="rect" class="cardRef" coords="{{data.geolocation}}" alt="{{data.summary}}" href="#{{place}}_text">
+                            
+                            <area id="{{place}}_text" shape="rect" class="cardRef" coords="{{data.geolocation.0}},{{data.geolocation.1}},{{data.geolocation.2}},{{data.geolocation.3}}" alt="{{data.summary}}" href="#{{place}}_text">
                                 
                                 {% else %}
                                 
-                                <area id="{{place}}_point" shape="circle" class="cardRef" coords="{{data.geolocation}}" alt="{{data.summary}}" href="#{{place}}_point">
+                                <area id="{{place}}_point" shape="circle" class="cardRef" coords="{{data.geolocation.0}},{{data.geolocation.1}},{{data.geolocation.2}}" alt="{{data.summary}}" href="#{{place}}_point">
                                     
                                     {% endif %}
                                     {% endfor %}
@@ -68,5 +82,11 @@
         </section>
     </div>
 </div>
+
+<script type="text/javascript">
+
+$(window).load(function(){ $('map').imageMapResize(); });
+    
+</script>
 
 {% endblock %}
